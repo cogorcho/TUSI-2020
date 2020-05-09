@@ -19,7 +19,7 @@ El servicio a proveer, en una primera etapa, es solo de consulta.
 
 ### 1. Bajar el zip
 Obtener el archivo de datos de:
-[datos.gob.ar](href="https://datos.gob.ar/dataset/educacion-padron-oficial-establecimientos-educativos")
+[datos.gob.ar](https://datos.gob.ar/dataset/educacion-padron-oficial-establecimientos-educativos)
 
 Descomprimir el zip **mae_actualizado\_AAAA\_MM\_DD.zip** y abrir un cmd (o terminal)
 en ese directorio.
