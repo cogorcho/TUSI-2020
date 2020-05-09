@@ -460,7 +460,7 @@ Manual. No se utilizo TDD
 *   **Gianluca Sparvoli**  
 *   **Gaston Albornoz**  
 *   **Virginia Molinelli**  
-   **Nicolas D'Imperio**  
+*   **Nicolas D'Imperio**  
 
 ## Licencia
 
