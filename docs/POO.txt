@@ -1,0 +1,65 @@
+# ----------------------------------------------------------------
+# Programacion Orientada a Objetos
+# ----------------------------------------------------------------
+La Programacion Orientada a Objetos (POO) es un paradigma de programacion que
+provee los medios para estructurar programas de modo tal que propiedadaes y
+comportamiento (variables y funciones) esten agrupados dentro de Objetos
+individuales.
+
+Por ejemplo, un objeto puede representar cualquier cosa de la realidad, como una persona.
+Una persona tiene propiedades como edad, nombre, domicilio, etc.
+Y tiene comportamientos como caminar, hablar, respirar, pensar...
+
+Otro ejemplo, un email puede tener propiedades como lista de receptores, asunto, 
+el mensaje en si, etc. Como comportamientos, agregar adjuntos, enviar.
+
+Dicho de otra forma, la POO es un enfoque para modelar cosas concretas de la vida real
+como autos por ejemplo, y las relaciones entre cosas como empresas y empleados,
+maestros y alumnos, etc.
+
+La POO modela entidades del mundo real como objetos de software, que tienen datos asociados
+y que pueden ejecutar ciertas funciones.
+
+Otro paradigma de progracion es la progracion estructurada. En este enfoque, se definen
+procedimientos, funciones y bloques de codigo para implementar una serie pasos a ejecutar
+como en una receta.
+
+# ----------------------------------------------------------------
+# Classes in Python
+# ----------------------------------------------------------------
+Class Perro:
+    pass 
+
+pass: se usa como reemplazo de codigo que eventualmente se ejecutaria.
+Sirve para evitar que haya errores cuando se esta probando.
+
+miguel alpan
+    amiguen plan
+    gimen alla, up!
+    magullen pia
+    genial pluma
+    palmen igual
+    pan miel gula
+    ella mi punga
+    pelan mi gula
+
+ivan manetta
+    mi vena, tanta
+    mantita ven
+    ventanita ma
+    matan avenita
+    teta mina van
+    ven a mantita
+    te imantan, va!
+    manita te van! 
+    me van a tinta
+    vetan mi tana
+
+
+juan arce
+    jura cena
+    cuna raje
+    cuan reja
+    juren, cae 
+    ruje cana 
+    rujan, cae

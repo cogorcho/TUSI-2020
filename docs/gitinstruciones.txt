@@ -1,0 +1,135 @@
+1. create .gitignore
+    (API) juan@xubuntu:~/dev/python/API$ cat .gitignore
+    bin/
+    include/
+    lib/
+    test/
+    __pycache__/
+    *.pyc 
+
+2. git init
+    (API) juan@xubuntu:~/dev/python/API$ git init
+    Initialized empty Git repository in /home/juan/dev/python/API/.git/
+    (API) juan@xubuntu:~/dev/python/API$ 
+    (API) juan@xubuntu:~/dev/python/API$ 
+
+3. git status (muestra q va a tomar)
+    (API) juan@xubuntu:~/dev/python/API$ git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        README.md
+        config/
+        docs/
+        modulos/
+        runapp.bat
+        runapp.sh
+        sql/
+        templates/
+        test.py
+        webapp.py
+
+4. git add . (todo lo que haya en .)
+(API) juan@xubuntu:~/dev/python/API$ git add .
+
+
+5. git status
+juan@xubuntu:~/dev/python/API$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   .gitignore
+	new file:   README.md
+	new file:   config/config.dat
+	new file:   docs/Manual.txt
+	new file:   docs/POO.txt
+	new file:   docs/VirtualEnv.txt
+	new file:   docs/connector-python-en.pdf
+	new file:   modulos/__init__.py
+	new file:   modulos/ambito.py
+	new file:   modulos/columns.py
+	new file:   modulos/config.py
+	new file:   modulos/db.py
+	new file:   modulos/departamento.py
+	new file:   modulos/escuela.py
+	new file:   modulos/localidad.py
+	new file:   modulos/niveleducacion.py
+	new file:   modulos/provincia.py
+	new file:   modulos/sector.py
+	new file:   modulos/sesiones.py
+	new file:   modulos/tables.py
+	new file:   modulos/tipoeducacion.py
+	new file:   modulos/tiponiveleducacion.py
+	new file:   modulos/util.py
+	new file:   modulos/version.py
+	new file:   modulos/views.py
+	new file:   runapp.bat
+	new file:   runapp.sh
+	new file:   sql/data/DatosBase.csv
+	new file:   sql/load/ambitos.sql
+	new file:   sql/load/departamentos.sql
+	new file:   sql/load/escuelas.sql
+	new file:   sql/load/loadcsv.sql
+	new file:   sql/load/localidades.sql
+	new file:   sql/load/niveleseducacion.sql
+	new file:   sql/load/provincias.sql
+	new file:   sql/load/sectores.sql
+	new file:   sql/load/tednivescuelas.sql
+	new file:   sql/load/tiposeducacion.sql
+	new file:   sql/load/tiposniveleseducacion.sql
+	new file:   sql/procedures/getAmbito.sql
+	new file:   sql/procedures/getDeptId.sql
+	new file:   sql/procedures/getDeptPcia.sql
+	new file:   sql/procedures/getEducEscuela.sql
+	new file:   sql/procedures/getEscuelaXId.sql
+	new file:   sql/procedures/getEscuelasXLoc.sql
+	new file:   sql/procedures/getEscuelasXPcia.sql
+	new file:   sql/procedures/getLocalDept.sql
+	new file:   sql/procedures/getLocalId.sql
+	new file:   sql/procedures/getLocalPcia.sql
+	new file:   sql/procedures/getNivelEducacion.sql
+	new file:   sql/procedures/getProvincia.sql
+	new file:   sql/procedures/getSector.sql
+	new file:   sql/procedures/getSesiones.sql
+	new file:   sql/procedures/getTableColumns.sql
+	new file:   sql/procedures/getTables.sql
+	new file:   sql/procedures/getTipoEducacion.sql
+	new file:   sql/procedures/getTipoNivelEducacion.sql
+	new file:   sql/procedures/getViews.sql
+	new file:   sql/tables/Ambito.sql
+	new file:   sql/tables/DatosBase.sql
+	new file:   sql/tables/Departamento.sql
+	new file:   sql/tables/Escuela.sql
+	new file:   sql/tables/Localidad.sql
+	new file:   sql/tables/MailTel.sql
+	new file:   sql/tables/Nivel.sql
+	new file:   sql/tables/NivelEducacion.sql
+	new file:   sql/tables/Provincia.sql
+	new file:   sql/tables/Sector.sql
+	new file:   sql/tables/TedNivEscuela.sql
+	new file:   sql/tables/TipoEdNivel.sql
+	new file:   sql/tables/TipoEducacion.sql
+	new file:   sql/tables/TipoNivelEducacion.sql
+	new file:   sql/views/adultos.sql
+	new file:   sql/views/arte.sql
+	new file:   sql/views/bilingue.sql
+	new file:   sql/views/comun.sql
+	new file:   sql/views/encierro.sql
+	new file:   sql/views/especial.sql
+	new file:   sql/views/hospital.sql
+	new file:   sql/views/servicios.sql
+	new file:   templates/frmEscuela.html
+	new file:   templates/index.html
+	new file:   test.py
+	new file:   webapp.py
+
+

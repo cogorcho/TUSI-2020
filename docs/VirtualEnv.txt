@@ -1,0 +1,101 @@
+https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/
+
+Seguir las instrucciones en windows para instalar virtual env
+
+Bajar de gdrive la Carpeta Parcial-01
+ cd al dir anterior a Parcial-01
+
+juan@xubuntu:~/dev/python$ ls -l Parcial-01
+total 48
+-rw-rw-r-- 1 juan juan 13572 abr 18 18:51 Manual.txt
+drwxrwxr-x 3 juan juan  4096 abr 19 17:50 modulos
+-rw-rw-r-- 1 juan juan    33 abr 19 17:19 runapp.bat
+-rwxrwxr-x 1 juan juan    49 abr 19 15:08 runapp.sh
+drwxrwxr-x 7 juan juan  4096 abr 19 17:50 sql
+drwxrwxr-x 4 juan juan  4096 abr 19 17:50 static
+drwxrwxr-x 2 juan juan  4096 abr 19 17:50 templates
+-rw-rw-r-- 1 juan juan  2537 abr 19 16:11 test.py
+-rw-rw-r-- 1 juan juan  2395 abr 19 17:13 webapp.py
+
+juan@xubuntu:~/dev/python$ virtualenv -p /usr/bin/python3 Parcial-01
+Running virtualenv with interpreter /usr/bin/python3
+Using base prefix '/usr'
+New python executable in /home/juan/dev/python/Parcial-01/bin/python3
+Also creating executable in /home/juan/dev/python/Parcial-01/bin/python
+Installing setuptools, pip, wheel...
+done.
+
+juan@xubuntu:~/dev/python$ ls -l Parcial-01
+total 60
+drwxrwxr-x 2 juan juan  4096 abr 19 17:51 bin
+drwxrwxr-x 2 juan juan  4096 abr 19 17:51 include
+drwxrwxr-x 3 juan juan  4096 abr 19 17:51 lib
+-rw-rw-r-- 1 juan juan 13572 abr 18 18:51 Manual.txt
+drwxrwxr-x 3 juan juan  4096 abr 19 17:50 modulos
+-rw-rw-r-- 1 juan juan    33 abr 19 17:19 runapp.bat
+-rwxrwxr-x 1 juan juan    49 abr 19 15:08 runapp.sh
+drwxrwxr-x 7 juan juan  4096 abr 19 17:50 sql
+drwxrwxr-x 4 juan juan  4096 abr 19 17:50 static
+drwxrwxr-x 2 juan juan  4096 abr 19 17:50 templates
+-rw-rw-r-- 1 juan juan  2537 abr 19 16:11 test.py
+-rw-rw-r-- 1 juan juan  2395 abr 19 17:13 webapp.py
+
+juan@xubuntu:~/dev/python/Parcial-01$ source bin/activate
+
+(Parcial-01) juan@xubuntu:~/dev/python/Parcial-01$ pip3 install mysql.connector
+Processing /home/juan/.cache/pip/wheels/23/27/3e/72be437e6a950b8972728d2a62935ae7cd0d7c3c251fb2e737/mysql_connector-2.2.9-cp36-cp36m-linux_x86_64.whl
+Installing collected packages: mysql.connector
+Successfully installed mysql.connector
+
+(Parcial-01) juan@xubuntu:~/dev/python/Parcial-01$ pip3 install flask
+Collecting flask
+  Using cached Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+Collecting Werkzeug>=0.15
+  Using cached Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Collecting Jinja2>=2.10.1
+  Using cached Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+Collecting click>=5.1
+  Using cached click-7.1.1-py2.py3-none-any.whl (82 kB)
+Collecting itsdangerous>=0.24
+  Using cached itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting MarkupSafe>=0.23
+  Using cached MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl (27 kB)
+Installing collected packages: Werkzeug, MarkupSafe, Jinja2, click, itsdangerous, flask
+Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.1 flask-1.1.2 itsdangerous-1.1.0
+
+(Parcial-01) juan@xubuntu:~/dev/python/Parcial-01$ runapp.sh
+ * Serving Flask app "webapp.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Accessing DB:  tusi
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+Si vamos al Browser podemos hacer pruebas de la API:
+
+localhost:5000/
+localhost:5000/version
+localhost:5000/provincias
+localhost:5000/provincia/23
+localhost:5000/sectores
+localhost:5000/sector/3
+localhost:5000/ambitos
+localhost:5000/ambito/1
+localhost:5000/tiposeducacion
+localhost:5000/tipoeducacion/4
+localhost:5000/niveleseducacion
+localhost:5000/niveleducacion/11
+localhost:5000/tiposniveleseducacion
+localhost:5000/tiponiveleseducacion/5
+localhost:5000/escuelasxlocalidad/915
+localhost:5000/escuelaxid/10404
+localhost:5000/tedescuelas/10404
+localhost:5000/localidades/23
+localhost:5000/localidadesxdepto/915
+localhost:5000/localidad/1000
+localhost:5000/departamentos/1
+localhost:5000/departamento/18
+localhost:5000/cargar/escuela
+localhost:5000/cargar/departamento
+localhost:5000/cargar/sector

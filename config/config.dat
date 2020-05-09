@@ -1,0 +1,12 @@
+LOGLEVEL:INFO
+LOGDIR:/home/juan/dev/python/API/log
+CLIENTE:TUSI UTN 2020
+TEMA:Dark
+LOGFMT:%(asctime)s %(message)s
+LOGDATEFMT:%Y/%m/%d-%I%M%S-%p
+DBhost:localhost
+DBuser:tssi
+DBpassword:tssi-2020
+DBdb:tusi
+DBcharset:utf8
+DBuse_unicode:True 
