@@ -466,6 +466,6 @@ Manual. No se utilizo TDD
 
 Totalmente libre
 
-## Agradeciemientos
+## Agradecimientos
     A Manuel Cepeda, Gianluca Sparvoli, Gaston Albornoz, Virginia Molinelli 
     y Nicolas D'Imperio.
