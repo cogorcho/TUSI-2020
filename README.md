@@ -391,7 +391,7 @@ Ed_Hospitalaria_Domiciliaria_Secundaria: X
 **views.py** 
 ** util.py**  
 
-##Rutas
+## Rutas
 localhost:5000/  
 localhost:5000/version  
 localhost:5000/provincias  
