@@ -14,7 +14,7 @@ El servicio a proveer, en una primera etapa, es solo de consulta.
 * [python](https://www.python.org/downloads/) - El lenguaje a utilizar  
 * [virtualenv](https://pypi.org/project/virtualenv/) - Ambiente de desarrollo  
 
-* Cmo instalar virtualenv en Windows(https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/)
+* Como instalar virtualenv en Windows(https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/)
 # Instalacion
 
 ### 1. Bajar el zip
