@@ -442,7 +442,7 @@ Lo siguiente seria enviar los datos del form de carga
 a la base de datos.
 Para eso hay q agregarle al form la accion a realizar Y
 capturar el metodo POST con su data.
-```
+
 
 ## Test
 
