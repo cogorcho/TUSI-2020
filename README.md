@@ -456,7 +456,7 @@ Manual. No se utilizo TDD
 * **Juan Arce** - Trabajo Inicial* - [github](https://github.com/cogorcho)
 
 **Participantes**  
-*   **Manuel Cepeda**  
+*   **Manuel Cánepa**  
 *   **Gianluca Sparvoli**  
 *   **Gaston Albornoz**  
 *   **Virginia Molinelli**  
@@ -467,5 +467,5 @@ Manual. No se utilizo TDD
 Totalmente libre
 
 ## Agradecimientos
-    A Manuel Cepeda, Gianluca Sparvoli, Gaston Albornoz, Virginia Molinelli 
+    A Manuel Cánepa, Gianluca Sparvoli, Gaston Albornoz, Virginia Molinelli 
     y Nicolas D'Imperio.
