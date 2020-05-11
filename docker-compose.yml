@@ -1,0 +1,45 @@
+version: '3.0'
+
+services:
+  tssi:
+    container_name: tssi
+    image: python:3.7-alpine
+    command: sh runapp.sh
+    working_dir: /app
+    # command: flask run -h 0.0.0.0
+    # enviroment:
+    #   - FLASK_APP=webapp.py
+    #   - FLASK_DEBUG=1
+    volumes:
+      - ./:/app:rw
+    environment:
+      - DB_HOST=tssi-db
+      - DB_PORT_NUMBER=3306
+      - DB_USER=tssi
+      - DB_PASSWORD=tssi-2020
+      - DB_DATABASE=tusi
+    depends_on:
+      - tssi-db
+    links:
+      - tssi-db
+    ports:
+      - 5000:5000
+
+  tssi-db:
+    image: mariadb:latest
+    container_name: tssi-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tusi
+      - MYSQL_USER=tssi
+      - MYSQL_PASSWORD=tssi-2020
+    expose:
+      - 3306
+    volumes:
+      - tssi-db-data:/var/lib/mysql
+      # - ./docker/db/myconf.cnf:/etc/mysql/conf.d/myconf.cnf
+      # - ./.docker/db/tusi.sql.gz:/docker-entrypoint-initdb.d/001-dump.sql.gz
+
+volumes:
+  tssi-db-data:
+    driver: local

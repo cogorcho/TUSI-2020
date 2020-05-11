@@ -2,7 +2,6 @@
 
 Proyecto integrando Bases de Datos (mysql) y programacion avanzada (python)de la Tecnitatura Superior en Sistemas Informaticos (TUSI) de la Regional San Nicolas de la UTN.
 
-
 # Servicio
 
 El servicio a proveer, en una primera etapa, es solo de consulta.
@@ -10,11 +9,19 @@ El servicio a proveer, en una primera etapa, es solo de consulta.
 # Prerrequisitos
 
 **Instalar:**  
-[Mysql](https://dev.mysql.com/downloads/) - La base de datos  
+
+* [Docker](https://docs.docker.com/get-docker/)
+* [Mysql](https://dev.mysql.com/downloads/) - La base de datos  
 * [python](https://www.python.org/downloads/) - El lenguaje a utilizar  
 * [virtualenv](https://pypi.org/project/virtualenv/) - Ambiente de desarrollo  
 
 * Como instalar virtualenv en Windows(https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/)
+
+
+# Ejecucion mediante docker-compose
+
+Una vez clonado el proyecto, se debe ejecutar `docker-compose up -d` sobre el directorio para poder ejecutar el contenedor de los proyectos y se puede visualizar a través del navegador accediendo a http://localhost:5000/
+
 # Instalacion
 
 ### 1. Bajar el zip
