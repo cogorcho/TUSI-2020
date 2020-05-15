@@ -35,7 +35,7 @@ en ese directorio.
 mysql -u root -p  
 msyql> create database tusi;  
 msyql> use tusi;  
-mysql> ALTER DATABASE tusi CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;  
+mysql> ALTER DATABASE tusi CHARACTER SET utf8 COLLATE utf8_unicode_ci;  
 mysql> create user 'tssi'@'%' identified by 'tssi-2020';  
 mysql> grant all privileges on tusi.* to 'tssi'@'%' identified by 'tssi-2020';  
 
@@ -49,12 +49,11 @@ Query OK, 63390 rows affected, 4 warnings (1.81 sec)
 Records: 63390  Deleted: 0  Skipped: 0  Warnings: 4  
 
 mysql> select count(*) from DatosBase;  
-+----------+  
+ 
 | count(*) |  
-+----------+  
+|:--------:| 
 |    63390 |  
-+----------+  
-
+ 
 
 ### 4. Creacion de tablas auxiliares
 **4.1. Provincia:**  
@@ -62,41 +61,37 @@ mysql> source sql/tables/Provincia.sql
 Query OK, 0 rows affected (0.02 sec)  
 mysql> source sql/load/provincias.sql  
 mysql> select count(*) from Provincia;  
-+----------+  
+ 
 | count(*) |  
-+----------+  
+|:--------:|  
 |       24 |  
-+----------+  
-
+ 
 **4.2 Ambito** 
 mysql> source sql/tables/Ambito.sql    
 mysql> source sql/load/ambitos.sql  
 mysql> select count(*) from Ambito;  
-+----------+  
+ 
 | count(*) |  
-+----------+  
+|:--------:|  
 |        3 |  
-+----------+  
-
+ 
 **4.3. Sector**  
 mysql> source sql/tables/Sector.sql  
 mysql> source sql/load/sectores.sql  
 mysql> select count(*) from Sector;  
-+----------+  
+ 
 | count(*) |  
-+----------+  
+|:--------:|  
 |        3 |  
-+----------+  
-
+ 
 **4.3. Departamento**  
 mysql> source sql/tables/Departamento.sql  
 mysql> source sql/load/departamentos.sql  
 mysql> select count(*) from Departamento;  
-+----------+  
+
 | count(*) |  
-+----------+  
+|:--------:|  
 |      527 |  
-+----------+  
 
 **4.4. Localidad**  
 mysql> source sql/tables/Localidad.sql  
@@ -107,38 +102,32 @@ mysql> select count(*) from Localidad;
 |:--------:|
 |     9020 |
 
-**4.5. Mail y Telefono**  
-mysql> source sql/tables/MailTel.sql  
-Nota: Crea la tabla y carga los Datos  
-
-
 ### 5. Stored Procedures
 **5.1. Provincia**  
 mysql> source sql/procedures/getProvincia.sql  
 mysql> call getProvincia(1);  
-+----+--------------+  
+ 
 | id | nombre       |  
-+----+--------------+  
+|:--:|:------------:| 
 |  1 | Buenos Aires |  
-+----+--------------+  
+ 
 
 **5.2. Ambito**  
 mysql> source sql/procedures/getAmbito.sql  
 mysql> call getAmbito(1)  
-+----+--------+  
+
 | id | nombre |  
-+----+--------+  
+|:--:|:------:|  
 |  1 | Urbano |  
-+----+--------+  
 
 **5.3. Sector**  
 mysql> source sql/procedures/getSector.sql    
 mysql> call getSector(1);  
-+----+---------+  
+
 | id | nombre  |
-+----+---------+  
+|:--:|:-------:| 
 |  1 | Estatal |  
-+----+---------+  
+
 
 **5.4. Departamento**  
 
@@ -146,9 +135,8 @@ mysql> call getSector(1);
 
 mysql> source sql/procedures/getDeptPcia.sql  
 mysql> call getDeptPcia(24);  
-+-----+----------------+  
 | id  | nombre         |  
-+-----+----------------+  
+|:---:|:--------------:|  
 | 511 | BURRUYACU      |  
 | 512 | CAPITAL        |  
 | 513 | CHICLIGASTA    |  
@@ -166,18 +154,17 @@ mysql> call getDeptPcia(24);
 | 525 | TAFI VIEJO     |  
 | 526 | TRANCAS        |  
 | 527 | YERBA BUENA    |  
-+-----+----------------+  
+
 17 rows in set (0.00 sec)  
 
 **5.4.2. Por Departamento id**
 
 mysql> source sql/procedures/getDeptId.sql  
 mysql> call getDeptId(527);  
-+-----+-------------+-------------+  
+
 | id  | idProvincia | nombre      |  
-+-----+-------------+-------------+  
+|:---:|:-----------:|:-----------:|
 | 527 |          24 | YERBA BUENA |  
-+-----+-------------+-------------+  
 
 **5.5. Localidad**
 
@@ -185,9 +172,9 @@ mysql> call getDeptId(527);
 
 mysql> source sql/procedures/getLocalPcia.sql  
 mysql> call getLocalPcia(23);  
-+------+----------------+----------+-----------------------+  
+
 | id   | idDepartamento | codigo   | nombre                |  
-+------+----------------+----------+-----------------------+  
+|:----:|:--------------:|:--------:|:---------------------:|
 | 8558 |            508 | 94028004 | BASE ESPERANZA        |  
 | 8559 |            509 | 94007012 | CULLEN                |  
 | 8560 |            509 | 94007058 | ESTANCIA MARIA BEHETY |  
@@ -198,30 +185,27 @@ mysql> call getLocalPcia(23);
 | 8565 |            510 | 94014022 | LAGUNA ESCONDIDA      |  
 | 8566 |            510 | 94014024 | PUESTO ALMANZA        |  
 | 8567 |            510 | 94014028 | USHUAIA               |  
-+------+----------------+----------+-----------------------+  
 
 **5.5.2. por Departamento**
 
 mysql> source sql/procedures/getLocalDept.sql  
 mysql> call getLocalDept(510);  
-+------+----------+------------------+  
+
 | id   | codigo   | nombre           |  
-+------+----------+------------------+  
+|:----:|:--------:|:----------------:|  
 | 8565 | 94014022 | LAGUNA ESCONDIDA |  
 | 8566 | 94014024 | PUESTO ALMANZA   |  
 | 8567 | 94014028 | USHUAIA          |  
-+------+----------+------------------+  
+
 
 **5.5.3. por ID**
 
 mysql> source sql/procedures/getLocalId.sql  
 mysql> call getLocalId(8567);  
-+------+----------------+----------+---------+  
-| id   | idDepartamento | codigo   | nombre  |  
-+------+----------------+----------+---------+  
-| 8567 |            510 | 94014028 | USHUAIA |  
-+------+----------------+----------+---------+  
 
+| id   | idDepartamento | codigo   | nombre  |  
+|:----:|:--------------:|:--------:|:-------:|  
+| 8567 |            510 | 94014028 | USHUAIA |  
 
 ### 6. Escuela
 **6.1. Crear la tabla Escuela**
@@ -229,18 +213,22 @@ mysql> call getLocalId(8567);
 mysql> source sql/tables/Escuela.sql  
 mysql> source sql/load/escuelas.sql  
 mysql> select count(*) from Escuela;  
-+----------+  
+ 
 | count(*) |  
-+----------+  
+|:--------:| 
 |    63387 |  
-+----------+  
 
-**6.2. Escuelas por Id**
+**6.2. Crear tabla Mail y Telefono**  
+
+mysql> source sql/tables/MailTel.sql  
+Nota: Crea la tabla y carga los Datos  
+
+**6.3. Escuelas por Id**
  
 mysql> source sql/procedures/getEscuelaXId.sql  
 mysql> call getEscuelaXId(1);  
 
-**6.3 Escuelas por Localidad**
+**6.4 Escuelas por Localidad**
 
 mysql> source sql/procedures/getEscuelasXLoc.sql  
 mysql> call getEscuelasXLoc(511);  
@@ -253,9 +241,9 @@ mysql> call getEscuelasXLoc(511);
 mysql> source sql/tables/TipoEducacion.sql  
 mysql> source sql/load/tiposeducacion.sql  
 mysql> select * from TipoEducacion order by id;  
-+----+---------------------------+  
+
 | id | nombre                    |  
-+----+---------------------------+  
+|:--:|:-------------------------:|  
 |  1 | Comun                     |  
 |  2 | Especial                  |  
 |  3 | Adultos                   |  
@@ -263,17 +251,16 @@ mysql> select * from TipoEducacion order by id;
 |  5 | Hospitalaria_Domiciliaria |  
 |  6 | Intercultural_Bilingue    |  
 |  7 | Contexto_de_Encierro      |  
-|  8 | Servicios_Complementarios |  
-+----+---------------------------+  
+|  8 | Servicios_Complementarios | 
 
 **7.2 NivelEducacion**
 
 mysql> source sql/tables/NivelEducacion.sql  
 mysql> source sql/load/niveleseducacion.sql  
 mysql> select * from NivelEducacion order by id;  
-+----+--------------------------------+  
+
 | id | nombre                         |  
-+----+--------------------------------+  
+|:--:|:------------------------------:|
 |  1 | Jardin_maternal                |  
 |  2 | Inicial                        |  
 |  3 | Primaria                       |  
@@ -288,7 +275,7 @@ mysql> select * from NivelEducacion order by id;
 | 12 | Alfabetización                 |  
 | 13 | Formación_Profesional          |  
 | 14 | Formación_Profesional_INET     |  
-+----+--------------------------------+  
+
 
 **7.3. TipoNivelEducacion**
 
@@ -320,9 +307,8 @@ Records: 85216  Duplicates: 0  Warnings: 0
 
 mysql> source sql/procedures/getEducEscuela.sql  
 mysql> call getEducEscuela(10404);  
-+-------+---------------------------+-------------------------+  
 | id    | Tipo                      | Nivel                   |  
-+-------+---------------------------+-------------------------+  
+|:-----:|:-------------------------:|:-----------------------:|  
 | 68489 | Especial                  | Primaria                |  
 | 69209 | Especial                  | Secundaria              |  
 | 70520 | Especial                  | Secundaria_Tecnica_INET |  
@@ -331,16 +317,15 @@ mysql> call getEducEscuela(10404);
 | 72755 | Hospitalaria_Domiciliaria | Inicial                 |  
 | 72849 | Hospitalaria_Domiciliaria | Primaria                |  
 | 72970 | Hospitalaria_Domiciliaria | Secundaria              |  
-+-------+---------------------------+-------------------------+  
+
 8 rows in set (0.00 sec)
 
-mysql> select Codigo from Escuela where id =  
- 10404;  
-+-----------+  
+mysql> select Codigo from Escuela where id = 10404;  
+
 | Codigo    |  
-+-----------+  
+|:---------:|  
 | 061155700 |  
-+-----------+  
+
 
 mysql> select * from DatosBase where CUE_Anexo = '061155700' \G  
 *************************** 1. row ***************************  

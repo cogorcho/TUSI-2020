@@ -8,7 +8,7 @@ create table MailTel (
 )
 as
 select e.id, db.CUE_Anexo as Codigo, lower(trim(db.Mail)) as Mail,
-concat('(',db.Código_de_area,')',trim(db.telefono)) as Telefono
+concat('(',db.Codigo_de_area,')',trim(db.telefono)) as Telefono
 from DatosBase db
 inner join Escuela e
  on e.Codigo = db.CUE_Anexo;
