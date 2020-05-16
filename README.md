@@ -24,6 +24,16 @@ Una vez clonado el proyecto, se debe ejecutar `docker-compose up -d` sobre el di
 
 # Instalacion
 
+## Linux: Creacion del la BD mediante shell script.
+
+En el directorio mysql esta el script createdb.sh.
+Este script crea la BD, el usuario, las tablas y carga los datos.
+Deja todo listo para trabajar
+
+# En el ejmeplo se utilizo un usuario tusi2 y la base de datos con el mismo nombre.
+Esto deberia modificarse.
+
+
 ### 1. Bajar el zip
 Obtener el archivo de datos de:
 [datos.gob.ar](https://datos.gob.ar/dataset/educacion-padron-oficial-establecimientos-educativos)
