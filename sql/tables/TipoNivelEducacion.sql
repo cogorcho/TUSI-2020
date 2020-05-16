@@ -11,7 +11,7 @@ create table TipoNivelEducacion (
     idNivelEducacion INT NOT NULL,
     Primary key (id),
     CONSTRAINT fk_nte_te FOREIGN KEY (idTipoEducacion) REFERENCES TipoEducacion(id),
-    CONSTRAINT fk_nte_niv FOREIGN KEY (idNivel) REFERENCES NivelEducacion(id)
+    CONSTRAINT fk_nte_niv FOREIGN KEY (idNivelEducacion) REFERENCES NivelEducacion(id)
 );
 
 create unique index uidx_TipoNivelEducacion
